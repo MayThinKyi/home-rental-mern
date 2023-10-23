@@ -33,7 +33,7 @@ const CreateListingPage = () => {
     }else{
       try {
         dispatch(setLoading(true))
-        const res=await axios.post('http://localhost:8000/api/listings/create-listing',{...form,user:user?._id,images},{
+        const res=await axios.post('https://mern-estate-1vcf.onrender.com/api/listings/create-listing',{...form,user:user?._id,images},{
           headers:{
             authorization:localStorage.getItem('mern-estate-token')
           }

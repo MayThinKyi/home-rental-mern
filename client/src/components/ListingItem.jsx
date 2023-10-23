@@ -12,7 +12,7 @@ const ListingItem = ({listing}) => {
   const {user}=useSelector((state)=>state.user);
   const listingDeleteHandler=async()=>{
     try {
-      const res=await axios.delete(`http://localhost:8000/api/listings/${listing?._id}`,{
+      const res=await axios.delete(`https://mern-estate-1vcf.onrender.com/api/listings/${listing?._id}`,{
         headers:{
           authorization:localStorage.getItem('mern-estate-token')
         }

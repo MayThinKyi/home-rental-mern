@@ -26,7 +26,7 @@ const ProfilePage = () => {
   }
   const validateToken=async()=>{
     try {
-      const res=await axios.post('http://localhost:8000/api/auth/validate-token',{},{
+      const res=await axios.post('https://mern-estate-1vcf.onrender.com/api/auth/validate-token',{},{
         headers:{
           authorization:localStorage.getItem('mern-estate-token')
         }
@@ -44,7 +44,7 @@ const ProfilePage = () => {
   }
   const fetchUserListings=async()=>{
     try {
-      const res=await axios.get(`http://localhost:8000/api/listings/users/${user?._id}`,{
+      const res=await axios.get(`https://mern-estate-1vcf.onrender.com/api/listings/users/${user?._id}`,{
         headers:{
           authorization:localStorage.getItem('mern-estate-token')
         }
@@ -64,7 +64,7 @@ const ProfilePage = () => {
   }
   const updateProfile=async()=>{
    try {
-    const res=await axios.put('http://localhost:8000/api/users/update-profile',profile,{
+    const res=await axios.put('https://mern-estate-1vcf.onrender.com/api/users/update-profile',profile,{
       headers:{
         authorization:localStorage.getItem('mern-estate-token')
       }

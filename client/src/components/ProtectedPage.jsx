@@ -6,7 +6,7 @@ const ProtectedPage = ({children}) => {
   const navigate=useNavigate();
   const validateToken=async()=>{
    try {
-     const res=await axios.post('http://localhost:8000/api/auth/validate-token',{},{
+     const res=await axios.post('https://mern-estate-1vcf.onrender.com/api/auth/validate-token',{},{
        headers:{
          authorization:localStorage.getItem('mern-estate-token')
        }

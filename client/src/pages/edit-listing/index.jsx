@@ -29,7 +29,7 @@ const EditListingPage = () => {
     }else{
       try {
         dispatch(setLoading(true))
-        const res=await axios.put(`http://localhost:8000/api/listings/${listingId}`,{...form,user:user?._id,images},{
+        const res=await axios.put(`https://mern-estate-1vcf.onrender.com/api/listings/${listingId}`,{...form,user:user?._id,images},{
           headers:{
             authorization:localStorage.getItem('mern-estate-token')
           }
@@ -55,7 +55,7 @@ const EditListingPage = () => {
   const fetchListing=async()=>{
     try {
       dispatch(setLoading(true))
-      const res=await axios.get(`http://localhost:8000/api/listings/${listingId}`)
+      const res=await axios.get(`https://mern-estate-1vcf.onrender.com/api/listings/${listingId}`)
       dispatch(setLoading(false))
       const data=await res.data;
 

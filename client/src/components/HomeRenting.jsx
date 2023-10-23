@@ -11,7 +11,7 @@ const HomeRenting = () => {
     const [listings,setListings]=useState([]);
     const fetchListings=async()=>{
         try {
-            const res=await axios.get('http://localhost:8000/api/listings/search?type=rent&limit=6')
+            const res=await axios.get('https://mern-estate-1vcf.onrender.com/api/listings/search?type=rent&limit=6')
             const data=await res.data;
             dispatch(setLoading(false))
             if(data.success) setListings(data.listings);

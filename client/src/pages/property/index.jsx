@@ -24,7 +24,7 @@ const PropertyPage = () => {
     const [property,setProperty]=useState([]);
     const fetchProperty=async()=>{
       try {
-        const res=await axios.get(`http://localhost:8000/api/listings/${propertyId}`);
+        const res=await axios.get(`https://mern-estate-1vcf.onrender.com/api/listings/${propertyId}`);
         const data=await res.data;
         dispatch(setLoading(false))
 

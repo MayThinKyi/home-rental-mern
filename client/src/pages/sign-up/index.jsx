@@ -14,7 +14,7 @@ const SignUpPage = () => {
     e.preventDefault();
     if(registerForm.name.trim() && registerForm.email.trim() && registerForm.password.trim() ){
       try {
-        const res=await axios.post('http://localhost:8000/api/auth/register',registerForm);
+        const res=await axios.post('https://mern-estate-1vcf.onrender.com/api/auth/register',registerForm);
         const data=await res.data;
         if(data.success)  {
           toast.success(data.message)

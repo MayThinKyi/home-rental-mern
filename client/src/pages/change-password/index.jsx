@@ -18,7 +18,7 @@ const ChangePasswordPage = () => {
     e.preventDefault();
     if( passwordForm.oldPassword.trim() && passwordForm.newPassword.trim() ){
       try {
-        const res=await axios.put('http://localhost:8000/api/users/update-password',passwordForm,{
+        const res=await axios.put('https://mern-estate-1vcf.onrender.com/api/users/update-password',passwordForm,{
             headers:{
                 authorization:localStorage.getItem('mern-estate-token')
             }

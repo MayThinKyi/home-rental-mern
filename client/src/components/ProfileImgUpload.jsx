@@ -14,7 +14,7 @@ const ProfileImgUpload = () => {
     const updateProfile=async(imgUrl)=>{
         try {
             console.log('img',imgUrl)
-         const res=await axios.put('http://localhost:8000/api/users/update-profile',{
+         const res=await axios.put('https://mern-estate-1vcf.onrender.com/api/users/update-profile',{
             ...user,profilePicture:imgUrl
          },{
            headers:{

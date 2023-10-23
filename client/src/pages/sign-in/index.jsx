@@ -18,7 +18,7 @@ const SignInPage = () => {
     e.preventDefault();
     if( loginForm.email.trim() && loginForm.password.trim() ){
       try {
-        const res=await axios.post('http://localhost:8000/api/auth/login',loginForm);
+        const res=await axios.post('https://mern-estate-1vcf.onrender.com/api/auth/login',loginForm);
         const data=await res.data;
         if(data.success)  {
           toast.success(data.message)

@@ -22,14 +22,14 @@ const SearchPage = () => {
     const baths=searchParams.get('baths') ||''
     const furnished=searchParams.get('furnished') ||''
     const fetchAllListings=async()=>{
-      const res=await axios.get('http://localhost:8000/api/listings/search');
+      const res=await axios.get('https://mern-estate-1vcf.onrender.com/api/listings/search');
       const data=await res.data;
       dispatch(setLoading(false))
 
       setFilteredListings(data?.listings)
     }
     const filterListings=async()=>{
-      const res=await axios.get(`http://localhost:8000/api/listings/search?type=${type}&price=${price}&sort=${sort}&area=${area}&floors=${floors}&baths=${baths}&furnished=${furnished}`);
+      const res=await axios.get(`https://mern-estate-1vcf.onrender.com/api/listings/search?type=${type}&price=${price}&sort=${sort}&area=${area}&floors=${floors}&baths=${baths}&furnished=${furnished}`);
       const data=await res.data;
       dispatch(setLoading(false))
 
